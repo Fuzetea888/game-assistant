@@ -1,0 +1,367 @@
+{
+  "name": "FashionRevolution",
+  "tree": {
+    "$className": "DataModel",
+    
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      
+      "FashionRevolutionModules": {
+        "$className": "Folder",
+        
+        "Core": {
+          "$className": "Folder",
+          "MapGenerator": {
+            "$path": "src/MapGenerator.lua"
+          },
+          "AIFashionGenerator": {
+            "$path": "src/AIFashionGenerator.lua"
+          },
+          "CinematicRunway": {
+            "$path": "src/CinematicRunway.lua"
+          },
+          "SocialCompetition": {
+            "$path": "src/SocialCompetition.lua"
+          },
+          "CreatorEconomy": {
+            "$path": "src/CreatorEconomy.lua"
+          },
+          "VisualEffectsManager": {
+            "$path": "src/VisualEffectsManager.lua"
+          },
+          "AssetCreator": {
+            "$path": "src/AssetCreator.lua"
+          }
+        },
+        
+        "UI": {
+          "$className": "Folder",
+          "UIDesignSystem": {
+            "$path": "src/UIDesignSystem.lua"
+          }
+        },
+        
+        "Shared": {
+          "$className": "Folder",
+          "GameConfig": {
+            "$path": "src/shared/GameConfig.lua"
+          },
+          "Constants": {
+            "$path": "src/shared/Constants.lua"
+          },
+          "Utils": {
+            "$path": "src/shared/Utils.lua"
+          }
+        }
+      },
+      
+      "RemoteEvents": {
+        "$className": "Folder",
+        "GameEvents": {
+          "$className": "RemoteEvent"
+        },
+        "PlayerEvents": {
+          "$className": "RemoteEvent"
+        },
+        "UIEvents": {
+          "$className": "RemoteEvent"
+        },
+        "VotingEvents": {
+          "$className": "RemoteEvent"
+        },
+        "EconomyEvents": {
+          "$className": "RemoteEvent"
+        }
+      },
+      
+      "RemoteFunctions": {
+        "$className": "Folder",
+        "GetPlayerData": {
+          "$className": "RemoteFunction"
+        },
+        "GetGameState": {
+          "$className": "RemoteFunction"
+        },
+        "GetAssets": {
+          "$className": "RemoteFunction"
+        }
+      },
+      
+      "Assets": {
+        "$className": "Folder",
+        "Models": {
+          "$className": "Folder"
+        },
+        "Textures": {
+          "$className": "Folder"
+        },
+        "Sounds": {
+          "$className": "Folder"
+        },
+        "Effects": {
+          "$className": "Folder"
+        }
+      }
+    },
+    
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      
+      "FashionRevolutionServer": {
+        "$className": "Folder",
+        
+        "MainGame": {
+          "$path": "src/MainGame.lua"
+        },
+        
+        "GameInitializer": {
+          "$path": "src/ServerScriptService/GameInitializer.lua"
+        },
+        
+        "Services": {
+          "$className": "Folder",
+          "PlayerService": {
+            "$path": "src/server/PlayerService.lua"
+          },
+          "GameService": {
+            "$path": "src/server/GameService.lua"
+          },
+          "VotingService": {
+            "$path": "src/server/VotingService.lua"
+          },
+          "EconomyService": {
+            "$path": "src/server/EconomyService.lua"
+          },
+          "AnalyticsService": {
+            "$path": "src/server/AnalyticsService.lua"
+          }
+        },
+        
+        "DataStore": {
+          "$className": "Folder",
+          "PlayerData": {
+            "$path": "src/server/datastore/PlayerData.lua"
+          },
+          "GameStats": {
+            "$path": "src/server/datastore/GameStats.lua"
+          },
+          "AssetData": {
+            "$path": "src/server/datastore/AssetData.lua"
+          }
+        },
+        
+        "Security": {
+          "$className": "Folder",
+          "AntiExploit": {
+            "$path": "src/server/security/AntiExploit.lua"
+          },
+          "VotingValidator": {
+            "$path": "src/server/security/VotingValidator.lua"
+          },
+          "RateLimiter": {
+            "$path": "src/server/security/RateLimiter.lua"
+          }
+        }
+      }
+    },
+    
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        
+        "FashionRevolutionClient": {
+          "$className": "Folder",
+          
+          "ClientMain": {
+            "$path": "src/client/ClientMain.lua"
+          },
+          
+          "Controllers": {
+            "$className": "Folder",
+            "UIController": {
+              "$path": "src/client/controllers/UIController.lua"
+            },
+            "InputController": {
+              "$path": "src/client/controllers/InputController.lua"
+            },
+            "CameraController": {
+              "$path": "src/client/controllers/CameraController.lua"
+            },
+            "EffectsController": {
+              "$path": "src/client/controllers/EffectsController.lua"
+            },
+            "AudioController": {
+              "$path": "src/client/controllers/AudioController.lua"
+            }
+          },
+          
+          "UI": {
+            "$className": "Folder",
+            "MainInterface": {
+              "$path": "src/client/ui/MainInterface.lua"
+            },
+            "CreatorInterface": {
+              "$path": "src/client/ui/CreatorInterface.lua"
+            },
+            "VotingInterface": {
+              "$path": "src/client/ui/VotingInterface.lua"
+            },
+            "ShopInterface": {
+              "$path": "src/client/ui/ShopInterface.lua"
+            }
+          },
+          
+          "Systems": {
+            "$className": "Folder",
+            "LocalPlayer": {
+              "$path": "src/client/systems/LocalPlayer.lua"
+            },
+            "Networking": {
+              "$path": "src/client/systems/Networking.lua"
+            },
+            "Settings": {
+              "$path": "src/client/systems/Settings.lua"
+            }
+          }
+        }
+      },
+      
+      "StarterGui": {
+        "$className": "StarterGui",
+        "FashionRevolutionGui": {
+          "$path": "src/client/gui/MainGui.lua"
+        }
+      }
+    },
+    
+    "Lighting": {
+      "$className": "Lighting",
+      "PostProcessing": {
+        "$className": "Folder"
+      },
+      "Atmosphere": {
+        "$className": "Atmosphere",
+        "$properties": {
+          "Density": 0.3,
+          "Offset": 0.25,
+          "Color": [199, 199, 199],
+          "Decay": [106, 112, 125],
+          "Glare": 0.2,
+          "Haze": 1.7
+        }
+      },
+      "BloomEffect": {
+        "$className": "BloomEffect",
+        "$properties": {
+          "Intensity": 0.5,
+          "Size": 24,
+          "Threshold": 1.0
+        }
+      },
+      "ColorCorrectionEffect": {
+        "$className": "ColorCorrectionEffect",
+        "$properties": {
+          "Brightness": 0.1,
+          "Contrast": 0.2,
+          "Saturation": 0.3
+        }
+      }
+    },
+    
+    "Workspace": {
+      "$className": "Workspace",
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      
+      "FashionRevolutionWorld": {
+        "$className": "Folder",
+        "Terrain": {
+          "$className": "Folder"
+        },
+        "Buildings": {
+          "$className": "Folder"
+        },
+        "Lighting": {
+          "$className": "Folder"
+        },
+        "Effects": {
+          "$className": "Folder"
+        },
+        "Interactive": {
+          "$className": "Folder"
+        }
+      },
+      
+      "SpawnLocation": {
+        "$className": "SpawnLocation",
+        "$properties": {
+          "Anchored": true,
+          "Size": [10, 1, 10],
+          "Position": [0, 10, -120],
+          "BrickColor": "Bright green",
+          "Material": "Neon",
+          "Transparency": 0.8
+        }
+      }
+    },
+    
+    "SoundService": {
+      "$className": "SoundService",
+      "$properties": {
+        "AmbientReverb": "Arena"
+      },
+      
+      "Music": {
+        "$className": "Folder",
+        "BackgroundMusic": {
+          "$className": "Sound",
+          "$properties": {
+            "Volume": 0.3,
+            "Looped": true
+          }
+        }
+      },
+      
+      "SFX": {
+        "$className": "Folder",
+        "UI": {
+          "$className": "Folder"
+        },
+        "Gameplay": {
+          "$className": "Folder"
+        },
+        "Ambient": {
+          "$className": "Folder"
+        }
+      }
+    },
+    
+    "Teams": {
+      "$className": "Teams",
+      "Contestants": {
+        "$className": "Team",
+        "$properties": {
+          "Name": "Contestants",
+          "TeamColor": "Bright blue"
+        }
+      },
+      "Judges": {
+        "$className": "Team",
+        "$properties": {
+          "Name": "Judges",
+          "TeamColor": "Bright green"
+        }
+      },
+      "Spectators": {
+        "$className": "Team",
+        "$properties": {
+          "Name": "Spectators",
+          "TeamColor": "Medium stone grey"
+        }
+      }
+    }
+  }
+}
